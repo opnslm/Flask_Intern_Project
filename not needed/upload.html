@@ -6,24 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
-    <style>
-        table, th, td {
-          border:1px solid black;
-        }
-    </style>
 </head>
 <body>
     <div>
-        {% for key ,value in file.items(): %}
-        <table>
-            <th>
-                {{ key }}
-            </th>
-            <th>
-                {{ value }}
-            </th>
-        </table>
-        {% endfor %}
+        <form action="http://127.0.0.1:9090/upload.html" method="post" enctype = "multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit">
+          </form>
     </div>
 </body>
 </html>
